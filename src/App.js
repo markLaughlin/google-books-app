@@ -8,13 +8,10 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      searchFor: "Obama",
       books: [],
       id: 1,
       title: "state Book Title",
       author: "state author",
-      price: 70,
-      description: "state description"
     }
   }
 
@@ -26,12 +23,7 @@ class App extends Component{
     console.log("searchForChanged ran; value passed in below: ")
     console.log(value)
     let v = value
-    /* this.setState(
-      {searchFor: v}
-    )
-    console.log(this.state.searchFor)
-
-    const searchFor = this.state.searchFor */
+   
     const searchURL = `https://www.googleapis.com/books/v1/volumes?q=${v}+subject&key=AIzaSyDb08v7rFWLcTWuiA8le49qABV_LCz-8s8`
     fetch(searchURL)
     .then(response => {
