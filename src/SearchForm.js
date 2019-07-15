@@ -36,6 +36,20 @@ class SearchForm extends Component{
 
                     </select>
                 </form>
+
+                    <br/>
+                    <br/>
+
+                    {/* SECOND FORM */}
+
+                <form
+                    onChange={e => this.changeSelection(e.target.value)}
+                >
+                    <label htmlFor="sF">Enter a topic to find books about: </label>
+                    <input id ="sF" name="sF" type="text"></input>
+                    <input id="SfTwo" name="sFTwo" type="submit"></input>
+                    
+                </form>
                 
                 </main>
                 
